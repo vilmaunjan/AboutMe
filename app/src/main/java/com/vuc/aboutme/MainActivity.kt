@@ -37,10 +37,14 @@ class MainActivity : AppCompatActivity() {
      */
     private fun addNickname() {
         binding.apply {
+            myName?.nickname = nicknameEdit.text.toString()
             nicknameText.text = binding.nicknameEdit.text.toString()
             nicknameEdit.visibility = View.GONE
             doneButton.visibility = View.GONE
             nicknameText.visibility = View.VISIBLE
+
+            //So that the UI is refreshed with the value in the updated binding object.
+            invalidateAll()
         }
 
         // Hide the keyboard.
