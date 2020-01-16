@@ -19,6 +19,7 @@ import com.vuc.aboutme.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    private val myName: MyName = MyName("Vilma Un Jan")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,6 +28,8 @@ class MainActivity : AppCompatActivity() {
         binding.doneButton.setOnClickListener {
             addNickname()
         }
+
+        binding.myName = myName
     }
 
     /**
